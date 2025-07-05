@@ -8,4 +8,7 @@ html = pagina.text
 soup = BeautifulSoup(html, 'html.parser')
 
 for item in soup.find_all('title'):
-    print(item)
+    print(item.text)
+
+for item in soup.find_all('th', scope='row'):
+    print(item.text)
